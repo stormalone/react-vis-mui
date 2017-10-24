@@ -32,6 +32,15 @@ const pages = [
     title: 'Component API',
   },
   {
+    pathname: '/series',
+    title: 'Series',
+    children: [
+      {
+        pathname: '/series/arc',
+      },
+    ],
+  },
+  {
     pathname: '/',
     title: false,
   },
