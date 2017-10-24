@@ -9,7 +9,7 @@ function Page() {
   return (
     <MarkdownDocs
       markdown={markdown}
-      series={{
+      demos={{
         'pages/series/arc/ArcSeries1.js': {
           js: require('docs/src/pages/series/arc/ArcSeries1').default,
           raw: preval`

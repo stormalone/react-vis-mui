@@ -8,4 +8,4 @@ Write something here about the [Arc  Series](https://material.io/guidelines/layo
 
 ## Arc Series 1
 
-{{demo='pages/demos/series/arc/ArcSeries1.js'}}
+{{demo='pages/series/arc/ArcSeries1.js'}}
