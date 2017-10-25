@@ -5,12 +5,9 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 
 import {
-  XYPlot,
-  XAxis,
-  YAxis,
-  VerticalGridLines,
-  HorizontalGridLines,
-  VerticalBarSeries
+  ArcSeries,
+  RadialChart,
+  XYPlot
 } from 'react-vis';
 
 const styles = theme => ({
@@ -19,6 +16,7 @@ const styles = theme => ({
     width: '100%',
     opacity: 1,
     stroke: "blue",
+    strokeWidth: 1,    
     fill: theme.palette.background.contentFrame
   },
   flex: {
@@ -32,33 +30,27 @@ const styles = theme => ({
 
 function ArcSeries1(props) {
   const { classes } = props;
+
   return (
     <div className={classes.root}>
 
-    <XYPlot
-      xType="ordinal"
-      width={300}
-      height={300}
-      xDistance={100}
-      >
-      <VerticalGridLines />
-      <HorizontalGridLines />
-      <XAxis />
-      <YAxis />
-      <VerticalBarSeries
-        className="vertical-bar-series-example"
+      <RadialChart
+        colorType={'literal'}
+        colorDomain={[0, 100]}
+        colorRange={[0, 10]}
+        margin={{top: 100}}
         data={[
-          {x: 'A', y: 10},
-          {x: 'B', y: 5},
-          {x: 'C', y: 15}
-        ]}/>
-      <VerticalBarSeries
-        data={[
-          {x: 'A', y: 12},
-          {x: 'B', y: 2},
-          {x: 'C', y: 11}
-        ]}/>
-    </XYPlot>
+          {angle: 1, color: '#89DAC1', label: 'green', opacity: 0.2},
+          {angle: 2, color: '#F6D18A', label: 'yellow'},
+          {angle: 5, color: '#1E96BE', label: 'cyan'},
+          {angle: 3, color: '#DA70BF', label: 'magenta'},
+          {angle: 5, color: '#F6D18A', label: 'yellow again'}
+        ]}
+        showLabels
+        width={400}
+        height={300} />
+
+
     </div>
   );
 }
