@@ -9,3 +9,7 @@ Write something here about the [Mark  Series](https://material.io/guidelines/lay
 ## Mark Series 1
 
 {{demo='pages/series/mark/MarkSeries1.js'}}
+
+## Mark Series 2
+
+{{demo='pages/series/mark/MarkSeries2.js'}}
