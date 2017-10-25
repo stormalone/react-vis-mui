@@ -10,7 +10,7 @@ import {
   YAxis,
   VerticalGridLines,
   HorizontalGridLines,
-  VerticalBarSeries
+  AreaSeries
 } from 'react-vis';
 
 const styles = theme => ({
@@ -34,31 +34,22 @@ function AreaSeries1(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-
-    <XYPlot
-      xType="ordinal"
-      width={300}
-      height={300}
-      xDistance={100}
-      >
-      <VerticalGridLines />
-      <HorizontalGridLines />
-      <XAxis />
-      <YAxis />
-      <VerticalBarSeries
-        className="vertical-bar-series-example"
-        data={[
-          {x: 'A', y: 10},
-          {x: 'B', y: 5},
-          {x: 'C', y: 15}
-        ]}/>
-      <VerticalBarSeries
-        data={[
-          {x: 'A', y: 12},
-          {x: 'B', y: 2},
-          {x: 'C', y: 11}
-        ]}/>
-    </XYPlot>
+      <XYPlot
+        width={300}
+        height={300}>
+        <VerticalGridLines />
+        <HorizontalGridLines />
+        <XAxis />
+        <YAxis />
+        <AreaSeries
+          className="area-series-example"
+          curve="curveNatural"
+          data={[
+            {x: 1, y: 10},
+            {x: 2, y: 5},
+            {x: 3, y: 15}
+          ]}/>
+      </XYPlot>
     </div>
   );
 }
