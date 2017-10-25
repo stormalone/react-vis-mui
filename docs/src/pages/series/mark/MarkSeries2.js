@@ -8,7 +8,6 @@ import {
   VerticalGridLines,
   HorizontalGridLines,
   MarkSeries,
-  MarkSeriesCanvas,
   Hint
 } from 'react-vis';
 
@@ -50,23 +49,15 @@ const nextType = {
   typeB: 'typeA'
 };
 
-const nextModeContent = {
-  canvas: 'SWITCH TO SVG',
-  svg: 'SWITCH TO CANVAS'
-};
-
-const drawModes = ['canvas', 'svg'];
-
 export default class MarkSeries2 extends React.Component {
   state = {
-    drawMode: 0,
     data: randomData,
     colorType: 'typeA',
     value: false
   }
 
   render() {
-    const {drawMode, data, colorType} = this.state;
+    const {data, colorType} = this.state;
     const markSeriesProps = {
       animation: true,
       className: 'mark-series-example',
@@ -78,14 +69,9 @@ export default class MarkSeries2 extends React.Component {
       onNearestXY: value => this.setState({value})
     };
 
-    const mode = drawModes[drawMode];
     return (
-      <div className="canvas-wrapper">
-        <div className="canvas-example-controls">
-          <div>{`MODE: ${mode}`}</div>
-          <ShowcaseButton
-            onClick={() => this.setState({drawMode: (drawMode + 1) % 2})}
-            buttonContent={nextModeContent[mode]} />
+      <div>
+        <div>
           <ShowcaseButton
             onClick={() => this.setState({data: getRandomData()})}
             buttonContent={'UPDATE DATA'} />
@@ -101,10 +87,7 @@ export default class MarkSeries2 extends React.Component {
           <HorizontalGridLines />
           <XAxis />
           <YAxis />
-          {mode === 'canvas' &&
-            <MarkSeriesCanvas {...markSeriesProps}/>}
-          {mode === 'svg' &&
-            <MarkSeries {...markSeriesProps}/>}
+            <MarkSeries {...markSeriesProps}/>
           {this.state.value ?
             <Hint value={this.state.value}/> :
             null
