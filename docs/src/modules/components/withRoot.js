@@ -41,6 +41,9 @@ const pages = [
       {
         pathname: '/series/area',
       },
+      {
+        pathname: '/series/mark',
+      },
     ],
   },
   {
