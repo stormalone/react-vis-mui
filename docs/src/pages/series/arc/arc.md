@@ -9,3 +9,7 @@ Write something here about the [Arc  Series](https://material.io/guidelines/layo
 ## Arc Series 1
 
 {{demo='pages/series/arc/ArcSeries1.js'}}
+
+## Arc Series 2
+
+{{demo='pages/series/arc/ArcSeries2.js'}}

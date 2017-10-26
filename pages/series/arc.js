@@ -17,6 +17,15 @@ module.exports = require('fs')
   .readFileSync(require.resolve('docs/src/pages/series/arc/ArcSeries1'), 'utf8')
 `,
         },
+
+        'pages/series/arc/ArcSeries2.js': {
+          js: require('docs/src/pages/series/arc/ArcSeries2').default,
+          raw: preval`
+module.exports = require('fs')
+  .readFileSync(require.resolve('docs/src/pages/series/arc/ArcSeries2'), 'utf8')
+`,
+        },
+
       }}
     />
   );
