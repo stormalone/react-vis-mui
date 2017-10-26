@@ -42,6 +42,12 @@ const pages = [
         pathname: '/series/area',
       },
       {
+        pathname: '/series/bar',
+      },
+      {
+        pathname: '/series/line',
+      },
+      {
         pathname: '/series/mark',
       },
     ],

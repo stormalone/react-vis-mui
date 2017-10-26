@@ -3,7 +3,7 @@
 import React from 'react';
 import withRoot from 'docs/src/modules/components/withRoot';
 import MarkdownDocs from 'docs/src/modules/components/MarkdownDocs';
-import markdown from 'docs/src/pages/demos/react-vis-bar/react-vis-bar.md';
+import markdown from 'docs/src/pages/series/bar/bar.md';
 
 function Page() {
   return (
@@ -11,11 +11,11 @@ function Page() {
       markdown={markdown}
       demos={{
 
-        'pages/demos/react-vis-bar/BarSeries1.js': {
-          js: require('docs/src/pages/demos/react-vis-bar/BarSeries1').default,
+        'pages/series/bar/BarSeries1.js': {
+          js: require('docs/src/pages/series/bar/BarSeries1').default,
           raw: preval`
 module.exports = require('fs')
-  .readFileSync(require.resolve('docs/src/pages/demos/react-vis-bar/BarSeries1'), 'utf8')
+  .readFileSync(require.resolve('docs/src/pages/series/bar/BarSeries1'), 'utf8')
 `,
         },
 

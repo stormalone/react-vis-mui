@@ -8,4 +8,4 @@ Write something here about the [Bar  Series](https://material.io/guidelines/layo
 
 ## Bar Series 1
 
-{{demo='pages/demos/react-vis-bar/BarSeries1.js'}}
+{{demo='pages/series/bar/BarSeries1.js'}}

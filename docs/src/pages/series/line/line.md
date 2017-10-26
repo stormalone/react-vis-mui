@@ -8,12 +8,12 @@ Write something here about the [Line  Series](https://material.io/guidelines/lay
 
 ## Line Chart With Style
 
-{{demo='pages/demos/react-vis-line/LineChartWithStyle.js'}}
+{{demo='pages/series/line/LineChartWithStyle.js'}}
 
 ## Line Series 1
 
-{{demo='pages/demos/react-vis-line/LineSeries1.js'}}
+{{demo='pages/series/line/LineSeries1.js'}}
 
 ## Line Series 2
 
-{{demo='pages/demos/react-vis-line/LineSeries2.js'}}
+{{demo='pages/series/line/LineSeries2.js'}}
