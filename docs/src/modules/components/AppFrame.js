@@ -18,7 +18,6 @@ import FormatTextdirectionLToR from 'material-ui-icons/FormatTextdirectionLToR';
 import FormatTextdirectionRToL from 'material-ui-icons/FormatTextdirectionRToL';
 import Github from 'docs/src/modules/components/GitHub';
 import AppDrawer from 'docs/src/modules/components/AppDrawer';
-import AppSearch from 'docs/src/modules/components/AppSearch';
 import { pageToTitle } from 'docs/src/modules/utils/helpers';
 import actionTypes from 'docs/src/modules/redux/actionTypes';
 
@@ -205,7 +204,6 @@ class AppFrame extends React.Component<any, any> {
               </Typography>
             )}
             <div className={classes.grow} />
-            <AppSearch />
             <Tooltip title="Toggle light/dark theme" enterDelay={300}>
               <IconButton
                 color="contrast"
