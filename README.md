@@ -19,6 +19,3 @@ Then bring up the doc with this command.
 ```
 alias mui='npm run docs:dev'
 ```
-
-* bp2 we start to remove files that are not used.
-* bp1 pare down to just the raw essentials along with some react-vis
